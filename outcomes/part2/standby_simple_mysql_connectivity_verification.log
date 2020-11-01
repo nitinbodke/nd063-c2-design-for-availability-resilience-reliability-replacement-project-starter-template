@@ -1,0 +1,18 @@
+31-Oct-20 17:48:41-32662-INFO-Connection to MySQL DB successful
+31-Oct-20 17:48:41-32662-ERROR-The error '1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement' occurred
+31-Oct-20 17:48:41-32662-INFO-Total Row(s):10
+01-Nov-20 05:21:43-3654-INFO-Connection to MySQL DB successful
+01-Nov-20 05:21:43-3654-ERROR-The error '1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement' occurred
+01-Nov-20 05:21:43-3654-INFO-Total Row(s):10
+01-Nov-20 05:29:14-3752-INFO-Connection to MySQL DB successful
+01-Nov-20 05:29:14-3752-ERROR-The error '1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement' occurred
+01-Nov-20 05:29:14-3752-INFO-Total Row(s):10
+01-Nov-20 05:40:35-3829-INFO-Connection to MySQL DB successful
+01-Nov-20 05:40:35-3829-ERROR-The error '1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement' occurred
+01-Nov-20 05:40:35-3829-INFO-Total Row(s):10
+01-Nov-20 05:40:35-3829-INFO-Total Row(s):10
+01-Nov-20 06:19:51-4018-INFO-Connection to MySQL DB successful
+01-Nov-20 06:19:51-4018-INFO-Table created successfully
+01-Nov-20 06:19:51-4018-INFO-Total Row(s):10
+01-Nov-20 06:19:51-4018-INFO-Data inserted successfully
+01-Nov-20 06:19:51-4018-INFO-Total Row(s):12

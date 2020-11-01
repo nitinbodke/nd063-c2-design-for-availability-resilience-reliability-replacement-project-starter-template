@@ -1,0 +1,43 @@
+(env) [ec2-user@ip-10-2-10-167 my_udacity_app]$ python simple_mysql_connectivity_verification.py  ./config.ini aws-standby
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/ec2-user/my_udacity_app/env/lib64/python3.7/site-packages/mysql/connector/connection_cext.py", line 506, in cmd_query
+    raw_as_string=raw_as_string)
+_mysql_connector.MySQLInterfaceError: The MySQL server is running with the --read-only option so it cannot execute this statement
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "simple_mysql_connectivity_verification.py", line 39, in insert_authors
+    cursor.executemany(query, authors)
+  File "/home/ec2-user/my_udacity_app/env/lib64/python3.7/site-packages/mysql/connector/cursor_cext.py", line 352, in executemany
+    return self.execute(stmt)
+  File "/home/ec2-user/my_udacity_app/env/lib64/python3.7/site-packages/mysql/connector/cursor_cext.py", line 266, in execute
+    raw_as_string=self._raw_as_string)
+  File "/home/ec2-user/my_udacity_app/env/lib64/python3.7/site-packages/mysql/connector/connection_cext.py", line 509, in cmd_query
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/logging/__init__.py", line 1025, in emit
+    msg = self.format(record)
+  File "/usr/lib64/python3.7/logging/__init__.py", line 869, in format
+    return fmt.format(record)
+  File "/usr/lib64/python3.7/logging/__init__.py", line 608, in format
+    record.message = record.getMessage()
+  File "/usr/lib64/python3.7/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "simple_mysql_connectivity_verification.py", line 121, in <module>
+    main()
+  File "simple_mysql_connectivity_verification.py", line 112, in main
+    perform_db_operations(host, user, password, database)
+  File "simple_mysql_connectivity_verification.py", line 77, in perform_db_operations
+    insert_authors(connection, authors)
+  File "simple_mysql_connectivity_verification.py", line 43, in insert_authors
+    logger.error('Error:', e)
+Message: 'Error:'
+Arguments: (DatabaseError(1290, '1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement', 'HY000'),)

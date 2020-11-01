@@ -1,0 +1,29 @@
+31-Oct-20 12:51:25-2014-ERROR-Exception occurred
+Traceback (most recent call last):
+  File "simple_mysql_connectivity_verification.py", line 121, in <module>
+    main()
+  File "simple_mysql_connectivity_verification.py", line 104, in main
+    if parser[env]:
+  File "/usr/lib64/python3.7/configparser.py", line 958, in __getitem__
+    raise KeyError(key)
+KeyError: 'local'
+31-Oct-20 12:53:52-2032-INFO-Connection to MySQL DB successful
+31-Oct-20 12:53:53-2032-INFO-Table created successfully
+31-Oct-20 12:53:53-2032-INFO-Data inserted successfully
+31-Oct-20 12:53:53-2032-INFO-Total Row(s):2
+31-Oct-20 14:26:42-2365-INFO-Connection to MySQL DB successful
+31-Oct-20 14:26:42-2365-INFO-Table created successfully
+31-Oct-20 14:26:42-2365-INFO-Data inserted successfully
+31-Oct-20 14:26:42-2365-INFO-Total Row(s):4
+31-Oct-20 14:33:07-2378-INFO-Connection to MySQL DB successful
+31-Oct-20 14:33:07-2378-INFO-Table created successfully
+31-Oct-20 14:33:07-2378-INFO-Data inserted successfully
+31-Oct-20 14:33:07-2378-INFO-Total Row(s):6
+31-Oct-20 14:33:19-2379-INFO-Connection to MySQL DB successful
+31-Oct-20 14:33:19-2379-INFO-Table created successfully
+31-Oct-20 14:33:19-2379-INFO-Data inserted successfully
+31-Oct-20 14:33:19-2379-INFO-Total Row(s):8
+31-Oct-20 14:39:00-2382-INFO-Connection to MySQL DB successful
+31-Oct-20 14:39:00-2382-INFO-Table created successfully
+31-Oct-20 14:39:00-2382-INFO-Data inserted successfully
+31-Oct-20 14:39:00-2382-INFO-Total Row(s):10

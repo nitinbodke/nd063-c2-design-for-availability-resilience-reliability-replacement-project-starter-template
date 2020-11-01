@@ -1,0 +1,285 @@
+/rdsdbbin/mysql/bin/mysqld, Version: 8.0.20 (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2020-10-31T14:34:44.431256Z	    7 Connect	rdsadmin@localhost on  using TCP/IP
+2020-10-31T14:34:44.431549Z	    7 Query	/* mysql-connector-java-8.0.13-bin (Revision: ${revinfo.commit}) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-31T14:34:44.432489Z	    7 Query	SET NAMES utf8mb4
+2020-10-31T14:34:44.432613Z	    7 Query	SET character_set_results = NULL
+2020-10-31T14:34:44.432822Z	    7 Query	SET autocommit=1
+2020-10-31T14:34:44.433010Z	    7 Query	SET sql_mode='NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES'
+2020-10-31T14:34:44.433151Z	    7 Query	SHOW WARNINGS
+2020-10-31T14:34:44.434322Z	    7 Query	SELECT 1
+2020-10-31T14:34:44.434761Z	    7 Query	set @@session.binlog_format='STATEMENT'
+2020-10-31T14:34:44.435396Z	    7 Query	set @@session.transaction_isolation='REPEATABLE-READ'
+2020-10-31T14:34:44.435928Z	    7 Query	set @@session.time_zone='UTC'
+2020-10-31T14:34:44.436319Z	    7 Query	set @@session.autocommit=1
+2020-10-31T14:34:44.436745Z	    7 Query	SELECT 1
+2020-10-31T14:34:44.437151Z	    7 Query	SELECT 1
+2020-10-31T14:34:44.438264Z	    7 Query	SELECT 1
+2020-10-31T14:34:44.438661Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.398199Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.398774Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.399488Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.400056Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:34:49.407063Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.407500Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:34:49.416628Z	    7 Query	SELECT 1
+2020-10-31T14:34:49.417068Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:34:53.113896Z	    7 Query	SELECT 1
+2020-10-31T14:34:53.114396Z	    7 Query	SELECT 1
+2020-10-31T14:35:00.022743Z	    7 Query	SELECT 1
+2020-10-31T14:35:00.116085Z	    7 Query	SHOW GLOBAL VARIABLES LIKE 'mysql_cipher_stats_flush_period_in_seconds'
+2020-10-31T14:35:00.273468Z	    7 Query	SELECT 1
+2020-10-31T14:35:00.274098Z	    7 Query	SELECT @@session.transaction_read_only
+2020-10-31T14:35:00.274363Z	    7 Query	flush logs
+/rdsdbbin/mysql/bin/mysqld, Version: 8.0.20 (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2020-10-31T14:35:00.384600Z	    7 Query	SELECT 1
+2020-10-31T14:35:00.395801Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:35:00.432945Z	    7 Query	SELECT 1
+2020-10-31T14:35:00.433422Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:35:01.378843Z	    8 Connect	rdsrepladmin@172.31.3.142 on  using TCP/IP
+2020-10-31T14:35:01.389962Z	    8 Query	SELECT UNIX_TIMESTAMP()
+2020-10-31T14:35:01.401535Z	    8 Query	SELECT @@GLOBAL.SERVER_ID
+2020-10-31T14:35:01.412591Z	    8 Query	SET @master_heartbeat_period= 30000001024
+2020-10-31T14:35:01.423767Z	    8 Query	SET @master_binlog_checksum= @@global.binlog_checksum
+2020-10-31T14:35:01.434874Z	    8 Query	SELECT @master_binlog_checksum
+2020-10-31T14:35:01.446067Z	    8 Query	SELECT @@GLOBAL.GTID_MODE
+2020-10-31T14:35:01.457221Z	    8 Query	SELECT @@GLOBAL.SERVER_UUID
+2020-10-31T14:35:01.468252Z	    8 Query	SET @slave_uuid= '9fc0b9c3-1b3c-11eb-a465-068025332706'
+2020-10-31T14:35:01.490289Z	    8 Binlog Dump	Log: 'mysql-bin-changelog.000115'  Pos: 2153
+2020-10-31T14:35:04.398004Z	    7 Query	SELECT 1
+2020-10-31T14:35:04.398524Z	    7 Query	SELECT 1
+2020-10-31T14:35:04.399228Z	    7 Query	SELECT 1
+2020-10-31T14:35:04.399711Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:35:04.401158Z	    7 Query	SELECT 1
+2020-10-31T14:35:04.401589Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:35:04.404373Z	    7 Query	SELECT 1
+2020-10-31T14:35:04.404811Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:35:19.397940Z	    7 Query	SELECT 1
+2020-10-31T14:35:19.398456Z	    7 Query	SELECT 1
+2020-10-31T14:35:19.399167Z	    7 Query	SELECT 1
+2020-10-31T14:35:19.399642Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:35:19.401050Z	    7 Query	SELECT 1
+2020-10-31T14:35:19.401473Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:35:19.404439Z	    7 Query	SELECT 1
+2020-10-31T14:35:19.404921Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:35:25.018252Z	    7 Query	SELECT 1
+2020-10-31T14:35:25.018771Z	    7 Query	SELECT NAME, VALUE FROM mysql.rds_configuration
+2020-10-31T14:35:25.068783Z	    7 Query	SELECT 1
+2020-10-31T14:35:25.069279Z	    7 Query	SELECT @@session.transaction_read_only
+2020-10-31T14:35:25.069550Z	    7 Query	PURGE BINARY LOGS BEFORE '2020-10-31 14:30:00'
+2020-10-31T14:35:34.400669Z	    7 Query	SELECT 1
+2020-10-31T14:35:34.401214Z	    7 Query	SELECT 1
+2020-10-31T14:35:34.401852Z	    7 Query	SELECT 1
+2020-10-31T14:35:34.402349Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:35:34.403768Z	    7 Query	SELECT 1
+2020-10-31T14:35:34.404236Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:35:34.407100Z	    7 Query	SELECT 1
+2020-10-31T14:35:34.407542Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:35:49.398016Z	    7 Query	SELECT 1
+2020-10-31T14:35:49.398548Z	    7 Query	SELECT 1
+2020-10-31T14:35:49.399247Z	    7 Query	SELECT 1
+2020-10-31T14:35:49.399734Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:35:49.401089Z	    7 Query	SELECT 1
+2020-10-31T14:35:49.401513Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:35:49.403901Z	    7 Query	SELECT 1
+2020-10-31T14:35:49.404358Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:36:00.027957Z	    7 Query	SELECT 1
+2020-10-31T14:36:00.075047Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:36:00.127921Z	    7 Query	SELECT 1
+2020-10-31T14:36:00.128699Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:36:04.398723Z	    7 Query	SELECT 1
+2020-10-31T14:36:04.399250Z	    7 Query	SELECT 1
+2020-10-31T14:36:04.399949Z	    7 Query	SELECT 1
+2020-10-31T14:36:04.400459Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:36:04.401824Z	    7 Query	SELECT 1
+2020-10-31T14:36:04.402253Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:36:04.404752Z	    7 Query	SELECT 1
+2020-10-31T14:36:04.405185Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:36:19.398931Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.399440Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.400151Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.400632Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:36:19.401978Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.402399Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:36:19.403919Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.404413Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:36:19.405529Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.406219Z	    7 Query	SELECT @@session.transaction_read_only
+2020-10-31T14:36:19.406481Z	    7 Query	INSERT INTO mysql.rds_heartbeat2(id, value) values (1,1604154979405) ON DUPLICATE KEY UPDATE value = 1604154979405
+2020-10-31T14:36:19.415752Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.416240Z	    7 Query	SELECT @@session.transaction_read_only
+2020-10-31T14:36:19.416584Z	    7 Query	COMMIT
+2020-10-31T14:36:19.419743Z	    7 Query	SELECT 1
+2020-10-31T14:36:19.420260Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:36:34.398335Z	    7 Query	SELECT 1
+2020-10-31T14:36:34.398851Z	    7 Query	SELECT 1
+2020-10-31T14:36:34.399586Z	    7 Query	SELECT 1
+2020-10-31T14:36:34.400112Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:36:34.401506Z	    7 Query	SELECT 1
+2020-10-31T14:36:34.401943Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:36:34.406101Z	    9 Connect	rdsadmin@localhost on  using Socket
+2020-10-31T14:36:34.406156Z	    9 Statistics	
+2020-10-31T14:36:34.407085Z	    9 Quit	
+2020-10-31T14:36:34.409136Z	    7 Query	SELECT 1
+2020-10-31T14:36:34.409612Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:36:49.398267Z	    7 Query	SELECT 1
+2020-10-31T14:36:49.398775Z	    7 Query	SELECT 1
+2020-10-31T14:36:49.399458Z	    7 Query	SELECT 1
+2020-10-31T14:36:49.399931Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:36:49.401384Z	    7 Query	SELECT 1
+2020-10-31T14:36:49.401807Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:36:49.404534Z	    7 Query	SELECT 1
+2020-10-31T14:36:49.404973Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:37:00.072560Z	    7 Query	SELECT 1
+2020-10-31T14:37:00.090041Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:37:00.138487Z	    7 Query	SELECT 1
+2020-10-31T14:37:00.146558Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:37:04.398037Z	    7 Query	SELECT 1
+2020-10-31T14:37:04.398538Z	    7 Query	SELECT 1
+2020-10-31T14:37:04.399239Z	    7 Query	SELECT 1
+2020-10-31T14:37:04.399760Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:37:04.401190Z	    7 Query	SELECT 1
+2020-10-31T14:37:04.401639Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:37:04.404429Z	    7 Query	SELECT 1
+2020-10-31T14:37:04.404872Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:37:19.397646Z	    7 Query	SELECT 1
+2020-10-31T14:37:19.398209Z	    7 Query	SELECT 1
+2020-10-31T14:37:19.398938Z	    7 Query	SELECT 1
+2020-10-31T14:37:19.399430Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:37:19.400796Z	    7 Query	SELECT 1
+2020-10-31T14:37:19.401255Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:37:19.404035Z	    7 Query	SELECT 1
+2020-10-31T14:37:19.404498Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:37:34.397683Z	    7 Query	SELECT 1
+2020-10-31T14:37:34.398189Z	    7 Query	SELECT 1
+2020-10-31T14:37:34.398929Z	    7 Query	SELECT 1
+2020-10-31T14:37:34.399428Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:37:34.400856Z	    7 Query	SELECT 1
+2020-10-31T14:37:34.401297Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:37:34.404062Z	    7 Query	SELECT 1
+2020-10-31T14:37:34.404456Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:37:49.398221Z	    7 Query	SELECT 1
+2020-10-31T14:37:49.398750Z	    7 Query	SELECT 1
+2020-10-31T14:37:49.399455Z	    7 Query	SELECT 1
+2020-10-31T14:37:49.399948Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:37:49.401388Z	    7 Query	SELECT 1
+2020-10-31T14:37:49.401818Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:37:49.404295Z	    7 Query	SELECT 1
+2020-10-31T14:37:49.404727Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:38:00.034639Z	    7 Query	SELECT 1
+2020-10-31T14:38:00.068510Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:38:00.116093Z	    7 Query	SELECT 1
+2020-10-31T14:38:00.121464Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:38:04.397557Z	    7 Query	SELECT 1
+2020-10-31T14:38:04.398059Z	    7 Query	SELECT 1
+2020-10-31T14:38:04.398745Z	    7 Query	SELECT 1
+2020-10-31T14:38:04.399232Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:38:04.400597Z	    7 Query	SELECT 1
+2020-10-31T14:38:04.401040Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:38:04.403462Z	    7 Query	SELECT 1
+2020-10-31T14:38:04.403881Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:38:19.400625Z	    7 Query	SELECT 1
+2020-10-31T14:38:19.401129Z	    7 Query	SELECT 1
+2020-10-31T14:38:19.401818Z	    7 Query	SELECT 1
+2020-10-31T14:38:19.402294Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:38:19.403614Z	    7 Query	SELECT 1
+2020-10-31T14:38:19.404055Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:38:19.406413Z	    7 Query	SELECT 1
+2020-10-31T14:38:19.406838Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:38:34.398113Z	    7 Query	SELECT 1
+2020-10-31T14:38:34.398626Z	    7 Query	SELECT 1
+2020-10-31T14:38:34.399310Z	    7 Query	SELECT 1
+2020-10-31T14:38:34.399783Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:38:34.401130Z	    7 Query	SELECT 1
+2020-10-31T14:38:34.401553Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:38:34.403936Z	    7 Query	SELECT 1
+2020-10-31T14:38:34.404387Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:38:49.397843Z	    7 Query	SELECT 1
+2020-10-31T14:38:49.398341Z	    7 Query	SELECT 1
+2020-10-31T14:38:49.399034Z	    7 Query	SELECT 1
+2020-10-31T14:38:49.399510Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:38:49.400884Z	    7 Query	SELECT 1
+2020-10-31T14:38:49.401303Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:38:49.403687Z	    7 Query	SELECT 1
+2020-10-31T14:38:49.404132Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:39:00.026239Z	    7 Query	SELECT 1
+2020-10-31T14:39:00.058348Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:39:00.108400Z	    7 Query	SELECT 1
+2020-10-31T14:39:00.112076Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:39:00.315832Z	   10 Connect	udacity@10.1.10.197 on udacity using SSL/TLS
+2020-10-31T14:39:00.317065Z	   10 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
+2020-10-31T14:39:00.317747Z	   10 Query	SET NAMES utf8mb4
+2020-10-31T14:39:00.318363Z	   10 Query	set autocommit=0
+2020-10-31T14:39:00.319861Z	   10 Query	CREATE TABLE IF NOT EXISTS `authors` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `first_name` varchar(40) NOT NULL,
+    `last_name` varchar(40) NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1
+2020-10-31T14:39:00.327161Z	   10 Query	INSERT INTO authors(first_name, last_name) VALUES('Herbert','Methley'),('Olive','Wellwood')
+2020-10-31T14:39:00.327853Z	   10 Query	commit
+2020-10-31T14:39:00.337926Z	   10 Query	SELECT * FROM authors
+2020-10-31T14:39:00.338911Z	   10 Quit	
+2020-10-31T14:39:04.397778Z	    7 Query	SELECT 1
+2020-10-31T14:39:04.398323Z	    7 Query	SELECT 1
+2020-10-31T14:39:04.399014Z	    7 Query	SELECT 1
+2020-10-31T14:39:04.399525Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:39:04.400925Z	    7 Query	SELECT 1
+2020-10-31T14:39:04.401372Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:39:04.403820Z	    7 Query	SELECT 1
+2020-10-31T14:39:04.404277Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:39:19.398220Z	    7 Query	SELECT 1
+2020-10-31T14:39:19.398733Z	    7 Query	SELECT 1
+2020-10-31T14:39:19.399432Z	    7 Query	SELECT 1
+2020-10-31T14:39:19.399914Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:39:19.401267Z	    7 Query	SELECT 1
+2020-10-31T14:39:19.401692Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:39:19.404097Z	    7 Query	SELECT 1
+2020-10-31T14:39:19.404527Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:39:34.397751Z	    7 Query	SELECT 1
+2020-10-31T14:39:34.398256Z	    7 Query	SELECT 1
+2020-10-31T14:39:34.398935Z	    7 Query	SELECT 1
+2020-10-31T14:39:34.399418Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:39:34.400797Z	    7 Query	SELECT 1
+2020-10-31T14:39:34.401229Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:39:34.403683Z	    7 Query	SELECT 1
+2020-10-31T14:39:34.404141Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:39:49.397514Z	    7 Query	SELECT 1
+2020-10-31T14:39:49.398021Z	    7 Query	SELECT 1
+2020-10-31T14:39:49.398746Z	    7 Query	SELECT 1
+2020-10-31T14:39:49.399231Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:39:49.400596Z	    7 Query	SELECT 1
+2020-10-31T14:39:49.401014Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:39:49.403426Z	    7 Query	SELECT 1
+2020-10-31T14:39:49.403877Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:40:00.033700Z	    7 Query	SELECT 1
+2020-10-31T14:40:00.099676Z	    7 Query	SHOW GLOBAL VARIABLES LIKE 'mysql_cipher_stats_flush_period_in_seconds'
+2020-10-31T14:40:00.198932Z	    7 Query	SELECT 1
+2020-10-31T14:40:00.199440Z	    7 Query	SELECT @@session.transaction_read_only
+2020-10-31T14:40:00.200720Z	    7 Query	flush logs
+/rdsdbbin/mysql/bin/mysqld, Version: 8.0.20 (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2020-10-31T14:40:02.276531Z	    7 Query	SELECT 1
+2020-10-31T14:40:02.290515Z	    7 Query	SELECT count(*) from mysql.rds_history WHERE action = 'disable set master' GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port,master_user,master_log_file ,master_log_pos,master_ssl ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:40:02.354609Z	    7 Query	SELECT 1
+2020-10-31T14:40:02.361929Z	    7 Query	SELECT count(*) from mysql.rds_replication_status WHERE master_host IS NOT NULL and master_port IS NOT NULL GROUP BY action_timestamp,called_by_user,action,mysql_version,master_host,master_port ORDER BY action_timestamp LIMIT 1
+2020-10-31T14:40:04.398644Z	    7 Query	SELECT 1
+2020-10-31T14:40:04.399142Z	    7 Query	SELECT 1
+2020-10-31T14:40:04.399854Z	    7 Query	SELECT 1
+2020-10-31T14:40:04.400366Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:40:04.401766Z	    7 Query	SELECT 1
+2020-10-31T14:40:04.402194Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:40:04.404650Z	    7 Query	SELECT 1
+2020-10-31T14:40:04.405078Z	    7 Query	SELECT @@GLOBAL.read_only
+2020-10-31T14:40:19.397660Z	    7 Query	SELECT 1
+2020-10-31T14:40:19.398156Z	    7 Query	SELECT 1
+2020-10-31T14:40:19.398841Z	    7 Query	SELECT 1
+2020-10-31T14:40:19.399348Z	    7 Query	SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2'
+2020-10-31T14:40:19.400697Z	    7 Query	SELECT 1
+2020-10-31T14:40:19.401115Z	    7 Query	SELECT value FROM mysql.rds_heartbeat2
+2020-10-31T14:40:19.403487Z	    7 Query	SELECT 1
+2020-10-31T14:40:19.403929Z	    7 Query	SELECT @@GLOBAL.read_only
