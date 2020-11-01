@@ -1,9 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
 Description:  Udacity - Design for Availability, Resilience, and Reliability
 
 Parameters:
   VpcName:
     Description: A name that is prefixed to resource names
     Type: String
+    Default: tiger
 
   VpcCIDR:
     Description: Please enter the IP range (CIDR notation) for this VPC
@@ -203,6 +205,19 @@ Resources:
         - Key: Name
           Value: UDARR-Application
 
+  RDSSubnetGroup:
+    Type: "AWS::RDS::DBSubnetGroup"
+    Properties:
+      DBSubnetGroupDescription: RDS Subnet group
+      DBSubnetGroupName: udarr-rds-subnet
+      SubnetIds:
+        - !Ref PrivateSubnet1
+        - !Ref PrivateSubnet2
+      Tags:
+        -
+          Key: Name
+          Value: RDSSubnet
+
 Outputs:
   VPC:
     Description: VPC ID
@@ -223,3 +238,7 @@ Outputs:
   ApplicationSecurityGroup:
     Description: ID of the EC2 instance security group
     Value: !Ref ApplicationSecurityGroup
+
+  RDSSubnetGroup:
+    Description: RDS Subnet Group Id
+    Value: !Ref RDSSubnetGroup

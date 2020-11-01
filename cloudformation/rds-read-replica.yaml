@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  License: Apache-2.0
+Description: 'Creating a read replica in a different AWS Region'
+
+Parameters:
+  MasterDB:
+    Description: ARN ID of the source DB instance
+    Default: NONE
+    Type: String
+    ConstraintDescription: Valid ARN ID
+  DBSecurityGroups:
+    Description: The RDS security group
+    Default: default
+    Type: String
+    AllowedPattern: '[a-zA-Z0-9\-]+'
+    ConstraintDescription: must be a valid security group name.
+  MultiAZ:
+    Description: Multi-AZ master database
+    Type: String
+    Default: 'false'
+    AllowedValues: ['true', 'false']
+    ConstraintDescription: must be true or false.
+  DBSubnetGroupName:
+    Description: Database subnet group name
+    Default: NONE
+    Type: String
+
+Conditions:
+  HasDBSubnetGroupName: !Not [!Equals ["", !Ref "DBSubnetGroupName"]]
+
+Resources:
+  ReplicaDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      SourceDBInstanceIdentifier: !Ref 'MasterDB'
+      MultiAZ: !Ref 'MultiAZ'
+      VPCSecurityGroups: [!Ref 'DBSecurityGroups']
+      DBSubnetGroupName: !If [HasDBSubnetGroupName, !Ref 'DBSubnetGroupName', !Ref 'AWS::NoValue']
+      Tags:
+        - Key: Name
+          Value: Read Replica Database
