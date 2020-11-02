@@ -1,0 +1,42 @@
+RTO : Recovery Time Objective
+The targeted amount of time for a recovery to complete in the event of failure.
+
+RPO : Recovery Point Objective
+The targeted amount of time during which data is at risk for loss in the event of a failure.
+
+Following two features of the configuration have impact on both RTO and RPO.
+Multi-AZ:
+1. Replication:
+    1. Is synchronous.
+    2. Write only succeeds when written to both EBS volumes.
+2. Failover is automatic and transparent applications.
+3. Addresses availability.
+
+Cross Region:
+1. Replication:
+    1. Is asynchronous.
+    2. Replication lag depends on:
+         1. Network latency between source and destination region
+         2. Amount of traffic replicated
+2. Failover is user/script initiated.
+3. Addresses DR.
+
+Now with information we can try to address RTO and RPO.
+1. Minimum RTO for a single AZ outage:
+Typically automatic failover completes in one or two minutes.
+Failover can be affected by large uncommitted transactions.
+These must be recovered for failover to complete. In this case failover may take more time.
+
+2. Minimum RTO for a single region outage:
+As this is driven manually/configured scripts. Depends on following factors:
+1. Detecting region outage
+2. Promoting Read replica
+3. Application config changes if applicable
+
+3. Minimum RPO for a single AZ outage:
+As replication is synchronous, RPO is zero.
+
+4. Minimum RPO for a single region outage:
+As replication is asynchronous, its impacted by replica lag.
+Following command can give exact lag:
+aws rds describe-db-instances --db-instance-identifier <db-id> | grep LatestRestorableTime
