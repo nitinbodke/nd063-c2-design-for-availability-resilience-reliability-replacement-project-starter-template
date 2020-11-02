@@ -147,3 +147,11 @@ You will now need to “recover” the object:
 **SAVE** a screenshot of the modified webpage. Name your screenshot "s3_delete_revert.png"
 
 ## License
+Apache-2.0
+
+## Implementation Notes
+1. Stackset is used to setup AWS stack i.e. VPC, Active RDS, StandBy
+2. Stack set directory: cloudformation
+3. Setup/Cleanup scripts: scripts
+4. Python Test Application directory: python
+5. Screenshots/logs directory: outcomes
